@@ -4,22 +4,22 @@ Solutions to Hackerrank's Regular Expression Challenges at [https://www.hackerra
 
 **Last revision:** 1 January 2017
 
-* [Introduction](#Introduction) *Complete*
-* [Character Class](#Character-Class) *Pre-production*
-* [Repetitions](#Repetitions) *Pre-production*
-* [Grouping and Capturing](#Grouping-and-Capturing) *Pre-production*
-* [Backreferences](#Backreferences) *Pre-production*
-* [Assertions](#Assertions) *Pre-production*
-* [Applications](#Applications) *Pre-production*
+* [Introduction](#introduction) *Complete*
+* [Character Class](#character-class) *Pre-production*
+* [Repetitions](#repetitions) *Pre-production*
+* [Grouping and Capturing](#grouping-and-capturing) *Pre-production*
+* [Backreferences](#backreferences) *Pre-production*
+* [Assertions](#assertions) *Pre-production*
+* [Applications](#applications) *Pre-production*
 
 ## Introduction
 
-* [Matching Specific String](#Matching-Specific-String)
-* [Matching Anything But a Newline](#Matching-Anything-But-a-Newline)
-* [Matching Digits & Non-Digit Characters](#Matching-Digits-\&-Non\-Digit-Characters)
-* [Matching Whitespace & Non-Whitespace Character](#Matching-Whitespace-\&-Non\-Whitespace-Character)
-* [Matching Word & Non-Word Character](#Matching-Word-\&-Non\-Word-Character)
-* [Matching Start & End](#Matching-Start-\&-End)
+* [Matching Specific String](#matching-specific-string)
+* [Matching Anything But a Newline](#matching-anything-but-a-newline)
+* [Matching Digits & Non-Digit Characters](#matching-digits--non-digit-characters)
+* [Matching Whitespace & Non-Whitespace Character](#matching-whitespace--non-whitespace-character)
+* [Matching Word & Non-Word Character](#matching-word--non-word-character)
+* [Matching Start & End](#matching-start--end)
 
 ### Matching Specific String
 
