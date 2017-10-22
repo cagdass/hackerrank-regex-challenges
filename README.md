@@ -256,5 +256,5 @@ Regex_Pattern = r'^[a-z][1-9][^a-z][^A-Z][A-Z]'
 
 ## Revisions
 
-1 January 2017 - Added [Introduction](#introduction)
-22 October 2017 - Added [Character Class](#character-class)
+* 1 January 2017 - Added [Introduction](#introduction)
+* 22 October 2017 - Added [Character Class](#character-class)
