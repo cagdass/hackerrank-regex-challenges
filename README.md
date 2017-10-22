@@ -2,7 +2,7 @@
 
 Solutions to Hackerrank's Regular Expression Challenges at [https://www.hackerrank.com/domains/regex/](https://www.hackerrank.com/domains/regex/)
 
-**Last revision:** 1 January 2017
+**Last revision:** 22 October 2017
 
 * [Introduction](#introduction) *Complete*
 * [Character Class](#character-class) *Pre-production*
@@ -254,3 +254,7 @@ Regex_Pattern = r'^[a-z][1-9][^a-z][^A-Z][A-Z]'
 
 ## Applications
 
+## Revisions
+
+1 January 2017 - Added [Introduction](#introduction)
+22 October 2017 - Added [Character Class](#character-class)
