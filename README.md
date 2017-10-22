@@ -42,14 +42,16 @@ View on [Hackerrank](https://www.hackerrank.com/challenges/matching-anything-but
 #### Task
 You have a test string *S*.
  
-Your task is to match the pattern `abc.def.ghi.jkx`
+Your task is to match the pattern `abc.def.ghi.jkx`, and only exact strings that follow this pattern
 
 where each variable `a,b,c,d,e,f,g,h,i,j,k,x` can be any single character except the newline.
 
 #### Solution
 ~~~python
+# Because we want to match exact patterns in the string, we'll have
 # The caret, ^, matches the start of the line.
 # And similarly, the dollar sign, $, matches the end of the line.
+
 # A dot matches anything except for a newline character.
 # And to match a dot we need to escape it using a backslash, like this: \.
 
@@ -114,7 +116,7 @@ Here `x` denotes any word character and `X` denotes any non-word character.
 # \w matches a word character, it could be a letter, a digit or an underscore.
 # And \w matches a non-word character, anything that other than what \w matches.
 
-# The following regex uses a trick though,
+# It's time to use a trick though now,
 # While for instance \w matches 1 word character,
 # \w{2} matches 2 word characters, and \w{n} matches
 # n word characters.
@@ -148,12 +150,99 @@ Here, `x` denotes a word character, and `X` denotes a digit.
 # ^ matches the line start.
 # There is 1 digit following the line start.
 # Which is followed by 4 word characters.
-# Then there is a dot, which is escaped using a backslash.
+# Then there is a period, which is escaped with a backslash.
 # Then the regex matches the line end.
 Regex_Pattern = r"^\d\w{4}\.$"
 ~~~
 
 ## Character Class
+
+* [Matching Specific Characters](#matching-specific-characters)
+* [Excluding Specific Characters](#excluding-specific-characters)
+* [Matching Character Ranges](#matching-character-ranges)
+
+### Matching Specific Characters
+
+View on [Hackerrank](https://www.hackerrank.com/challenges/matching-specific-characters)
+
+#### Task
+
+Your test string *S* will have the following requirements:
+
+* *S* must be of length **6**
+* First character: **1**, **2** or **3**
+* Second character: **1**, **2** or **0**
+* Third character: **x**, **s** or **0**
+* Fourth character: **3**, **0**, **A** or **a**
+* Fifth character: **x**, **s** or **u**
+* Sixth character: **.** or **,**
+
+
+#### Solution
+
+~~~python
+# ^ matches the line start.
+# Any character from inside the square brackets can be matched with one character from the string.
+# [123] can match 1, 2 or 3 in the string.
+# Each group of characters inside the square brackets matches with one character in the string,
+# There are 6 groups of characters surrounded by square brackets, each group to match one character from the string,
+# Thus ensuring the length of the string is 6, since we have the line start and line end at the ends of our pattern.
+Regex_Pattern = r'^[123][120][xs0][30Aa][xsu][\.,]$'
+~~~
+
+### Excluding Specific Characters
+
+View on [Hackerrank](https://www.hackerrank.com/challenges/excluding-specific-characters)
+
+#### Task
+
+Your test string *S* will have the following requirements:
+
+* *S* must be of length **6**
+* First character should not be a digit (**1**, **2**, **3**, **4**, **5**, **6**, **7**, **8**, **9** or **0**).
+* Second character should not be a lowercase vowel (**a**, **e**, **i**, **o** or **u**).
+* Third character should not be **b**, **c**, **D** or **E**.
+* Fourth character should not be a whitespace character (**\r**, **\n**, **\t**, **\f** or the space character).
+* Fifth character should not be an uppercase vowel (**A**, **E**, **I**, **O** or **U**).
+* Sixth character should not be a **.** or **,** symbol.
+
+#### Solution
+
+~~~python
+# ^ matches the line start.
+# A caret, ^, inside the square brackets match a character from the string as long as that character is not found in the square bracket from the pattern.
+# [^aeiou] will match any character that is not a, e, i, o or u.
+# [^\d] will match any non-digit character, like \D.
+# Again there are 6 groups of characters surrounded by square brackets,
+# Thus ensuring the length of the string is 6, since we have the line start and line end at the ends of our pattern.
+Regex_Pattern = r'^[^\d][^aeiou][^bcDF][\S][^AEIOU][^\.\,]$'
+~~~
+
+### Matching Character Ranges
+
+View on [Hackerrank](https://www.hackerrank.com/challenges/matching-range-of-characters)
+
+#### Task
+
+* The test string's length is greater than or equal to 5.
+* The first character must be a lowercase English letter.
+* The second character is a positive digit, cannot be zero.
+* The third character must not be a lowercase English letter.
+* The fourth character must not be an uppercase English letter.
+* The fifth character must be an uppercase English letter.
+
+#### Solution
+
+~~~python
+# ^ matches the line start. We need the line start because we're matching starting from the first character of the string.
+# [a-z] will match any lowercase English letter from a to z both inclusive. [b-z] and [a-y] would match all lowercase English letters except for a and z respectively.
+# [1-9] will match any digit except for zero.
+# [^a-z] will match any character that is not a lowercase English letter.
+# [^A-Z] will match any character that is not an uppercase English letter.
+# [A-Z] will match any character that is an uppercase English letter.
+# Note that for this pattern there is no line end, because only the first five characters of the string are relevant, the rest may be anything.
+Regex_Pattern = r'^[a-z][1-9][^a-z][^A-Z][A-Z]'
+~~~
 
 ## Repetitions
 
