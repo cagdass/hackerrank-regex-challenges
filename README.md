@@ -4,8 +4,8 @@ Solutions to Hackerrank's Regular Expression Challenges at [https://www.hackerra
 
 **Last revision:** 22 October 2017
 
-* [Introduction](#introduction) *Complete*
-* [Character Class](#character-class) *Pre-production*
+* [Introduction](#introduction)
+* [Character Class](#character-class)
 * [Repetitions](#repetitions) *Pre-production*
 * [Grouping and Capturing](#grouping-and-capturing) *Pre-production*
 * [Backreferences](#backreferences) *Pre-production*
